@@ -20,8 +20,10 @@
 
 import PackageDescription
 
+let package : Package
+
 #if os(Linux)
-let package = Package(
+package = Package(
 	name: "PerfectThread",
 	products: [
 		.library(
@@ -41,7 +43,7 @@ let package = Package(
 		]
 )
 #else
-let package = Package(
+package = Package(
 	name: "PerfectThread",
 	products: [
 		.library(
